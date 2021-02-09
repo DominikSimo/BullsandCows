@@ -39,10 +39,11 @@ def number():
 def get_number():
     while True:
         my_number = input("Enter a number " + '\n')
-        if len(my_number) == 4 and my_number.isnumeric():
+        if len(my_number) == 4 and my_number.isnumeric() \
+                and len(my_number) == len(set(my_number)) and my_number[0] != "0":
             break
         else:
-            print("You must type 4 number digit. Try it again.")
+            print("You must type 4 unique number digit that does not begin with 0. Try it again.")
     return my_number
 
 
